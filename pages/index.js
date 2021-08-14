@@ -156,10 +156,6 @@ export default function Home({
           />
         ))}
       </Section>
-      {/* 
-      <Section title="Let's Connect">
-        <Contact />
-      </Section> */}
     </Layout>
   );
 }
