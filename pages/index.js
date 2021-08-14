@@ -39,7 +39,7 @@ export default function Home({
   };
 
   return (
-    <Layout title="Randy Glasgow">
+    <Layout title="Randy Glasgow" keywords={skills.map((skill) => skill.title)}>
       <div className="mx-auto p-4 space-y-4" id="title">
         <h1 className="text-5xl sm:text-7xl font-sans text-center">
           Randy Glasgow
