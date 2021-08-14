@@ -3,7 +3,7 @@ import { FaGlobe } from "react-icons/fa";
 
 export default function CompanyProject({ title, description, bullets, url }) {
   return (
-    <div className=" pl-2 my-4">
+    <div className="pl-2 my-4">
       <div className="group flex flex-col md:flex-row md:items-center md:justify-between lg:items-center lg:justify-between">
         <h4 className="text-2xl flex-shrink-0">{title}</h4>
         {url && url !== "" && (
@@ -23,18 +23,20 @@ export default function CompanyProject({ title, description, bullets, url }) {
         )}
       </div>
       <div className="text-lg">{description}</div>
-      {bullets !== "" && (
-        <ul className="pl-6 list-inside list-disc text-lg">
-          {bullets?.map((bullet, index) => {
-            return (
-              <div className="flex flex-row" key={index}>
-                <li className="list-disc" />
-                {bullet}
-              </div>
-            );
-          })}
-        </ul>
-      )}
+      {!bullets ||
+        (bullets !== "" && (
+          <ul className="pl-6 list-inside list-disc text-lg">
+            {bullets?.map((bullet, index) => {
+              if (bullet === "") return null;
+              return (
+                <div className="flex flex-row" key={index}>
+                  <li className="list-disc" />
+                  {bullet}
+                </div>
+              );
+            })}
+          </ul>
+        ))}
     </div>
   );
 }
