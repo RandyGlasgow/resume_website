@@ -51,7 +51,7 @@ export default function Home({
               href={btnLinkedIn.url}
               target="_blank"
               rel="noreferrer"
-              className="text-4xl p-2 rounded-md shadow-up-sm active:shadow-down-sm hover:text-yellow-600 transition-all duration-200"
+              className="text-4xl p-2 rounded-md shadow-up-sm active:shadow-down-sm hover:text-yellow-600 transition-all duration-200 select-none"
             >
               <FaLinkedin />
             </a>
@@ -61,7 +61,7 @@ export default function Home({
               href={btnGithub.url}
               target="_blank"
               rel="noreferrer"
-              className="text-4xl p-2 rounded-md shadow-up-sm active:shadow-down-sm hover:text-yellow-600 transition-all duration-200"
+              className="text-4xl p-2 rounded-md shadow-up-sm active:shadow-down-sm hover:text-yellow-600 transition-all duration-200 select-none"
             >
               <FaGithub />
             </a>
@@ -70,7 +70,7 @@ export default function Home({
             <a
               href={`${btnResume?.resume?.url}`}
               download
-              className="text-4xl p-2 rounded-md shadow-up-sm active:shadow-down-sm hover:text-yellow-600 transition-all duration-200"
+              className="text-4xl p-2 rounded-md shadow-up-sm active:shadow-down-sm hover:text-yellow-600 transition-all duration-200 select-none"
             >
               <FaFilePdf />
             </a>
