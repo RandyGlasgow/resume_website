@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html className="pt-24 bg-gradient-to-br from-gray-200 to-gray-400 min-h-screen">
+      <Html className="py-24 bg-gradient-to-br from-gray-200 to-gray-400 min-h-screen">
         <Head />
         <body>
           <Main />
