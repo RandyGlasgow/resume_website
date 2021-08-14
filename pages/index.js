@@ -50,6 +50,7 @@ export default function Home({
             <a
               href={btnLinkedIn.url}
               target="_blank"
+              rel="noreferrer"
               className="text-4xl p-2 rounded-md shadow-up-sm active:shadow-down-sm hover:text-yellow-600 transition-all duration-200"
             >
               <FaLinkedin />
@@ -59,6 +60,7 @@ export default function Home({
             <a
               href={btnGithub.url}
               target="_blank"
+              rel="noreferrer"
               className="text-4xl p-2 rounded-md shadow-up-sm active:shadow-down-sm hover:text-yellow-600 transition-all duration-200"
             >
               <FaGithub />
