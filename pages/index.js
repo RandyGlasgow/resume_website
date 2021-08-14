@@ -38,7 +38,6 @@ export default function Home({
     setSelected(e.target.name);
   };
 
-  console.log(btnResume);
   return (
     <Layout title="Randy Glasgow">
       <div className="mx-auto p-4 space-y-4" id="title">
