@@ -23,11 +23,11 @@ export default function CompanyProject({ title, description, bullets, url }) {
       </div>
       <div className="text-lg">{description}</div>
       {bullets !== "" && (
-        <ul className="list-inside list-disc text-lg group">
+        <ul className="pl-6 list-inside list-disc text-lg">
           {bullets?.map((bullet) => {
             return (
               <div className="flex flex-row">
-                <li className="list-disc group-hover:text-yellow-600" />
+                <li className="list-disc" />
                 {bullet}
               </div>
             );
