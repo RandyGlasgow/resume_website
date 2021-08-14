@@ -125,27 +125,25 @@ export default function Home({
       </Section>
 
       <Section title="Experience">
-        {companies.map(
-          ({ employer, role, start, end, company_projects }, companyIndex) => (
-            <Company
-              employer={employer}
-              role={role}
-              start={start}
-              end={end}
-              key={companyIndex}
-            >
-              {company_projects.map(({ bullets, description, title, url }) => (
-                <CompanyProject
-                  title={title}
-                  description={description}
-                  bullets={bullets?.split("/")}
-                  url={url}
-                  key={title}
-                />
-              ))}
-            </Company>
-          )
-        )}
+        {companies.map(({ employer, role, start, end, company_projects }) => (
+          <Company
+            employer={employer}
+            role={role}
+            start={start}
+            end={end}
+            key={employer}
+          >
+            {company_projects.map(({ bullets, description, title, url }) => (
+              <CompanyProject
+                title={title}
+                description={description}
+                bullets={bullets?.split("/")}
+                url={url}
+                key={title}
+              />
+            ))}
+          </Company>
+        ))}
       </Section>
 
       <Section title="Education">
@@ -155,6 +153,7 @@ export default function Home({
             degree={degree}
             concentration={concentration}
             end={end}
+            key={school + degree}
           />
         ))}
       </Section>
