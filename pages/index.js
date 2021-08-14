@@ -83,7 +83,7 @@ export default function Home({
           <a
             onClick={filterChips}
             name=""
-            className={`cursor-pointer hover:text-yellow-600 ${
+            className={`select-none cursor-pointer hover:text-yellow-600 ${
               selected === "" && "text-yellow-600"
             }`}
           >
@@ -92,7 +92,7 @@ export default function Home({
           <a
             onClick={filterChips}
             name="#tool"
-            className={`cursor-pointer hover:text-yellow-600 ${
+            className={`select-none cursor-pointer hover:text-yellow-600 ${
               selected === "#tool" && "text-yellow-600"
             }`}
           >
@@ -101,7 +101,7 @@ export default function Home({
           <a
             onClick={filterChips}
             name="#framework"
-            className={`cursor-pointer hover:text-yellow-600 ${
+            className={`select-none cursor-pointer hover:text-yellow-600 ${
               selected === "#framework" && "text-yellow-600"
             }`}
           >
@@ -110,7 +110,7 @@ export default function Home({
           <a
             onClick={filterChips}
             name="#language"
-            className={`cursor-pointer hover:text-yellow-600 ${
+            className={`select-none cursor-pointer hover:text-yellow-600 ${
               selected === "#language" && "text-yellow-600"
             }`}
           >
