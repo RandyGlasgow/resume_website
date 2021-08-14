@@ -192,6 +192,6 @@ export async function getStaticProps() {
 
   return {
     props: { companies, educations, skills, btnLinkedIn, btnGithub, btnResume },
-    revalidate: 120,
+    revalidate: 30,
   };
 }
