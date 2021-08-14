@@ -125,7 +125,7 @@ export default function Home({
       </Section>
 
       <Section title="Experience">
-        {companies.map(({ employer, role, start, end, company_projects }) => (
+        {companies?.map(({ employer, role, start, end, company_projects }) => (
           <Company
             employer={employer}
             role={role}
@@ -166,7 +166,7 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  let res = await fetch(`${API_URL}/companies`);
+  let res = await fetch(`${API_URL}/companies?_sort=order`);
   const companies = await res.json();
 
   res = await fetch(`${API_URL}/educations`);
