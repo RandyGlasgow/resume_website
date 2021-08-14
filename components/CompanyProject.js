@@ -8,7 +8,7 @@ export default function CompanyProject({ title, description, bullets, url }) {
         <h4 className="text-2xl flex-shrink-0">{title}</h4>
         {url && url !== "" && (
           <>
-            <div className="group-hover:border-yellow-600 border-t-2 border-dashed border-gray-400 w-full mx-2 transition-colors duration-300 ease-in-out"></div>
+            <div className="hidden md:block group-hover:border-yellow-600 border-t-2 border-dashed border-gray-400 w-full mx-2 transition-colors duration-300 ease-in-out"></div>
             <div className="border-transparent border group-hover:text-yellow-600 transition-colors duration-700 my-2 max-w-max shadow-up-sm hover:shadow-down-sm active:shadow-down rounded-full px-2 py-1 cursor-pointer select-none">
               <a
                 className="flex flex-row items-center gap-2 "
