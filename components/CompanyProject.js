@@ -25,9 +25,9 @@ export default function CompanyProject({ title, description, bullets, url }) {
       <div className="text-lg">{description}</div>
       {bullets !== "" && (
         <ul className="pl-6 list-inside list-disc text-lg">
-          {bullets?.map((bullet) => {
+          {bullets?.map((bullet, index) => {
             return (
-              <div className="flex flex-row">
+              <div className="flex flex-row" key={index}>
                 <li className="list-disc" />
                 {bullet}
               </div>
