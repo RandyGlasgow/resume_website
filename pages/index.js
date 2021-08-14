@@ -118,25 +118,34 @@ export default function Home({
           </a>
         </div>
         <div className="text-3xl flex my-4 flex-wrap gap-4 justify-center md:justify-start">
-          {chips?.map((skill) => (
-            <Chip title={skill.title} icon={skill.icon} />
+          {chips?.map((skill, index) => (
+            <Chip title={skill.title} icon={skill.icon} key={index} />
           ))}
         </div>
       </Section>
 
       <Section title="Experience">
-        {companies.map(({ employer, role, start, end, company_projects }) => (
-          <Company employer={employer} role={role} start={start} end={end}>
-            {company_projects.map(({ bullets, description, title, url }) => (
-              <CompanyProject
-                title={title}
-                description={description}
-                bullets={bullets?.split("/")}
-                url={url}
-              />
-            ))}
-          </Company>
-        ))}
+        {companies.map(
+          ({ employer, role, start, end, company_projects }, companyIndex) => (
+            <Company
+              employer={employer}
+              role={role}
+              start={start}
+              end={end}
+              key={companyIndex}
+            >
+              {company_projects.map(({ bullets, description, title, url }) => (
+                <CompanyProject
+                  title={title}
+                  description={description}
+                  bullets={bullets?.split("/")}
+                  url={url}
+                  key={title}
+                />
+              ))}
+            </Company>
+          )
+        )}
       </Section>
 
       <Section title="Education">

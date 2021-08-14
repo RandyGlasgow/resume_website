@@ -13,6 +13,7 @@ export default function CompanyProject({ title, description, bullets, url }) {
               <a
                 className="flex flex-row items-center gap-2 "
                 target="_blank"
+                rel="noreferrer"
                 href={url}
               >
                 <FaGlobe /> Explore
